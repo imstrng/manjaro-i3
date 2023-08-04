@@ -1,0 +1,19 @@
+#!/bin/bash
+
+PATH=$PATH:~/apps
+
+
+function backup {
+    f=$1
+    tar czvf ${f}.$(date +%Y%m%d.%H%M).tar.gz ${f}
+}
+
+
+
+alias t='date +%Y%m%d-%H%M'
+alias weer='curl wttr.in/Amsterdam'
+
+alias p='picocom -b 115200 /dev/ttyUSB0'
+alias put='ampy -p /dev/ttyUSB0 put'
+alias get='ampy -p /dev/ttyUSB0 get'
+alias run='ampy -p /dev/ttyUSB0 run'
